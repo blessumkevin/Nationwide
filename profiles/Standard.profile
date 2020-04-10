@@ -9436,6 +9436,9 @@
         <layout>Task-Task Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>TestNewObject__c-TestNewObject Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Test__c-Test Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
