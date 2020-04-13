@@ -246,6 +246,18 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>Custom_Account_Field__c</fullName>
+        <defaultValue>&quot;ABC123&quot;</defaultValue>
+        <description>for testing changing a field type and re-deploying</description>
+        <externalId>false</externalId>
+        <label>Custom Account Field</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Description</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
