@@ -247,15 +247,12 @@
     </fields>
     <fields>
         <fullName>Custom_Account_Field__c</fullName>
-        <defaultValue>&quot;ABC123&quot;</defaultValue>
-        <description>for testing changing a field type and re-deploying</description>
+        <defaultValue>false</defaultValue>
+        <description>for testing changing a field type and re-deploying (is now a checkbox, was text before)</description>
         <externalId>false</externalId>
         <label>Custom Account Field</label>
-        <length>200</length>
-        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Description</fullName>
