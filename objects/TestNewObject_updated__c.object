@@ -153,6 +153,82 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>New_Picklist_Child__c</fullName>
+        <externalId>false</externalId>
+        <label>New Picklist Child</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>New_Picklist_Master__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetName>copado__Quality_Gate_Types</valueSetName>
+            <valueSettings>
+                <controllingFieldValue>ActionLinkGroupTemplate</controllingFieldValue>
+                <controllingFieldValue>ApexPage</controllingFieldValue>
+                <controllingFieldValue>ConnectedApp</controllingFieldValue>
+                <controllingFieldValue>ContentAsset</controllingFieldValue>
+                <valueName>Manual Test</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>AnalyticSnapshot</controllingFieldValue>
+                <controllingFieldValue>ConnectedApp</controllingFieldValue>
+                <controllingFieldValue>ContentAsset</controllingFieldValue>
+                <valueName>Pull Request</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ApexClass</controllingFieldValue>
+                <controllingFieldValue>ConnectedApp</controllingFieldValue>
+                <controllingFieldValue>ContentAsset</controllingFieldValue>
+                <valueName>Compliance Check</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ConnectedApp</controllingFieldValue>
+                <controllingFieldValue>ContentAsset</controllingFieldValue>
+                <valueName>Apex Test with Validation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ConnectedApp</controllingFieldValue>
+                <controllingFieldValue>ContentAsset</controllingFieldValue>
+                <controllingFieldValue>CorsWhitelistOrigin</controllingFieldValue>
+                <valueName>Manual Approval</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ConnectedApp</controllingFieldValue>
+                <controllingFieldValue>ContentAsset</controllingFieldValue>
+                <controllingFieldValue>CspTrustedSite</controllingFieldValue>
+                <valueName>Selenium Test</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ConnectedApp</controllingFieldValue>
+                <controllingFieldValue>ContentAsset</controllingFieldValue>
+                <valueName>Static Code Analysis</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ConnectedApp</controllingFieldValue>
+                <controllingFieldValue>ContentAsset</controllingFieldValue>
+                <valueName>Validation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ConnectedApp</controllingFieldValue>
+                <controllingFieldValue>ContentAsset</controllingFieldValue>
+                <valueName>URL Callout</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>New_Picklist_Master__c</fullName>
+        <externalId>false</externalId>
+        <label>New Picklist Master</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>copado__Metadata_Types</valueSetName>
+        </valueSet>
+    </fields>
     <label>TestNewObject</label>
     <nameField>
         <label>TestNewObject Name Updated</label>
