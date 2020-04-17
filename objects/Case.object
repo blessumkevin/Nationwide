@@ -327,6 +327,8 @@
     </fields>
     <fields>
         <fullName>Status</fullName>
+        <businessStatus>Active</businessStatus>
+        <securityClassification>Public</securityClassification>
         <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
