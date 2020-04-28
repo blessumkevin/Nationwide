@@ -339,7 +339,9 @@
     </fields>
     <fields>
         <fullName>Type</fullName>
+        <inlineHelpText>Example Help Text</inlineHelpText>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
         <type>Picklist</type>
     </fields>
     <fields>
