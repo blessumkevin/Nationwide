@@ -65,6 +65,15 @@
         <won>false</won>
     </standardValue>
     <standardValue>
+        <fullName>In Procurement</fullName>
+        <default>false</default>
+        <label>In Procurement</label>
+        <closed>false</closed>
+        <forecastCategory>Forecast</forecastCategory>
+        <probability>80</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
         <fullName>Negotiation/Review</fullName>
         <default>false</default>
         <label>Negotiation/Review</label>
