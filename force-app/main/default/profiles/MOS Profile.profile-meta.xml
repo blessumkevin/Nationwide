@@ -174,7 +174,7 @@
     </applicationVisibilities>
     <classAccesses>
         <apexClass>ChangePasswordController</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>ChangePasswordControllerTest</apexClass>
@@ -254,7 +254,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>MonitorTestHelper</apexClass>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>MonitoredEnvironmentCallback</apexClass>
@@ -22958,7 +22958,7 @@
     </objectPermissions>
     <pageAccesses>
         <apexPage>AnswersHome</apexPage>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
         <apexPage>BandwidthExceeded</apexPage>
@@ -24183,10 +24183,6 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>copadometrics__Copado_Analytics</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>copadometrics__DevOps_Analytics</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
