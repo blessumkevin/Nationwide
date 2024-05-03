@@ -2,7 +2,6 @@ public class AccountOperations {
     public static Account setDefaultDescription(Account a) {
         a.Description = 'Default description';
         return a;
-        // test code
-        // another test
+        // changes with Hexagon
     }
 }
