@@ -2,7 +2,7 @@ public class AccountOperations {
     public static Account setDefaultDescription(Account a) {
         a.Description = 'Default description';
         return a;
-        // changes on May 13
+        // Jan 21 Update
     }
     // changes with Susan
 }
