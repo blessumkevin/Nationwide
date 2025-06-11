@@ -1,47 +1,53 @@
 @IsTest
-private class AccountOperationsTest {
-    @isTest static void setDefaultDescription() {
-        Account acc = new Account(Name = 'My Test Account');
-        insert acc;
-        acc = AccountOperations.setDefaultDescription(acc);
-        System.assertEquals('Default description', acc.Description);
-    }
+private class AccountOperations_Test {
     
-    @isTest static void setDefaultBillingAddress() {
-        Account acc = new Account(Name = 'My Test Account');
-        insert acc;
-        acc = AccountOperations.setDefaultBillingAddress(acc);
-        System.assertEquals('123 Default Street', acc.BillingStreet);
-        System.assertEquals('San Francisco', acc.BillingCity);
-        System.assertEquals('CA', acc.BillingState);
-        System.assertEquals('94105', acc.BillingPostalCode);
-    }
-    
-    @isTest static void setDefaultPhone() {
-        Account acc = new Account(Name = 'My Test Account');
-        insert acc;
-        acc = AccountOperations.setDefaultPhone(acc);
-        System.assertEquals('(555) 555-0123', acc.Phone);
-    }
-    
-    @isTest static void setDefaultURL() {
-        Account acc = new Account(Name = 'My Test Account');
-        insert acc;
-        acc = AccountOperations.setDefaultURL(acc);
-        System.assertEquals('www.example.com', acc.Website);
-    }
-    
-    @isTest static void testIsAccountComplete() {
-        // Test incomplete account
-        Account incompleteAcc = new Account(Name = 'Test Account');
-        System.assertEquals(false, AccountOperations.isAccountComplete(incompleteAcc));
+    @IsTest
+    static void testSetDefaultDescription_Success() {
+        // Arrange
+        List<Account> testAccounts = new List<Account>();
+        for(Integer i = 0; i < 200; i++) { // Testing bulk scenario
+            testAccounts.add(new Account(Name = 'Test Account ' + i));
+        }
         
-        // Test complete account
-        Account completeAcc = new Account(
-            Name = 'Test Account',
-            Phone = '(555) 555-0123',
-            BillingStreet = '123 Default Street'
-        );
-        System.assertEquals(true, AccountOperations.isAccountComplete(completeAcc));
+        // Act
+        Test.startTest();
+        List<Account> processedAccounts = AccountOperations.setDefaultDescription(testAccounts);
+        Test.stopTest();
+        
+        // Assert
+        System.assertEquals(200, processedAccounts.size(), 'Should return same number of accounts');
+        for(Account acc : processedAccounts) {
+            System.assertEquals('Default description', acc.Description, 
+                'Account description should be set to default value');
+        }
+    }
+    
+    @IsTest
+    static void testSetDefaultDescription_NullAccount() {
+        // Arrange
+        List<Account> testAccounts = new List<Account>{null};
+        
+        // Act
+        Test.startTest();
+        List<Account> processedAccounts = AccountOperations.setDefaultDescription(testAccounts);
+        Test.stopTest();
+        
+        // Assert
+        System.assertEquals(1, processedAccounts.size(), 'Should return same number of accounts');
+        System.assertEquals(null, processedAccounts[0], 'Null account should remain null');
+    }
+    
+    @IsTest
+    static void testSetDefaultDescription_EmptyList() {
+        // Arrange
+        List<Account> testAccounts = new List<Account>();
+        
+        // Act
+        Test.startTest();
+        List<Account> processedAccounts = AccountOperations.setDefaultDescription(testAccounts);
+        Test.stopTest();
+        
+        // Assert
+        System.assertEquals(0, processedAccounts.size(), 'Should return empty list');
     }
 }

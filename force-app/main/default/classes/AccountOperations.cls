@@ -1,63 +1,30 @@
 public class AccountOperations {
-    public static Account setDefaultDescription(Account a) {
-        a.Description = 'Default description';
-        return a;
-        // Jan 21 Update Now Again
-    }
-
-    // Add default billing address
-    public static Account setDefaultBillingAddress(Account a) {
-        a.BillingStreet = '123 Default Street';
-        a.BillingCity = 'San Francisco';
-        a.BillingState = 'CA';
-        a.BillingPostalCode = '94105';
-        return a;
-    }
-
-    // Add default phone number
-    public static Account setDefaultPhone(Account a) {
-        a.Phone = '(555) 555-0123';
-        return a;
-    }
-
-    // Set default website URL 
-    public static Account setDefaultURL(Account a) {
-        a.Website = 'www.example.com';
-        return a;
-    }
-
-    // Check if account is complete
-    public static Boolean isAccountComplete(Account a) {
-        return !String.isBlank(a.Name) 
-            && !String.isBlank(a.Phone)
-            && !String.isBlank(a.BillingStreet);
-    }
-
-    // Add default billing address
-    public static Account setDefaultBillingAddress(Account a) {
-        a.BillingStreet = '123 Default Street';
-        a.BillingCity = 'San Francisco';
-        a.BillingState = 'CA';
-        a.BillingPostalCode = '94105';
-        return a;
-    }
-
-    // Add default phone number
-    public static Account setDefaultPhone(Account a) {
-        a.Phone = '(555) 555-0123';
-        return a;
-    }
-
-    // Set default website URL 
-    public static Account setDefaultURL(Account a) {
-        a.Website = 'www.example.com';
-        return a;
-    }
-
-    // Check if account is complete
-    public static Boolean isAccountComplete(Account a) {
-        return !String.isBlank(a.Name) 
-            && !String.isBlank(a.Phone)
-            && !String.isBlank(a.BillingStreet);
+    
+    /**
+    * @description Sets a default description for a list of Account records
+    * @param accounts List of Account records to process
+    * @return List<Account> The processed Account records
+    */
+    public static List<Account> setDefaultDescription(List<Account> accounts) {
+        try {
+            // Process list of accounts instead of single record for bulk operations
+            for(Account acct : accounts) {
+                if(acct != null) {
+                    acct.Description = 'Default description';
+                }
+            }
+            
+            // Log successful operation
+            Logger.info('Successfully set default description for ' + accounts.size() + ' accounts');
+            Logger.saveLog();
+            
+            return accounts;
+            
+        } catch(Exception e) {
+            // Log error using Nebula Logger framework
+            Logger.error('Error setting default description for accounts: ' + e.getMessage());
+            Logger.saveLog();
+            throw e;
+        }
     }
 }
