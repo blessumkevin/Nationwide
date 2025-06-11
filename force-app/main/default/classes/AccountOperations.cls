@@ -7,7 +7,7 @@ public class AccountOperations {
     */
     public static List<Account> setDefaultDescription(List<Account> accounts) {
         try {
-            // Process list of accounts instead of single record for bulk operations
+            // Process list of accounts instead of single record for bulk operation
             for(Account acct : accounts) {
                 if(acct != null) {
                     acct.Description = 'Default description';
