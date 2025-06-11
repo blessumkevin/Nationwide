@@ -5,7 +5,7 @@ private class AccountOperations_Test {
     static void testSetDefaultDescription_Success() {
         // Arrange
         List<Account> testAccounts = new List<Account>();
-        for(Integer i = 0; i < 200; i++) { // Testing bulk scenario
+        for(Integer i = 0; i < 200; i++) { // Testing bulk scenarios
             testAccounts.add(new Account(Name = 'Test Account ' + i));
         }
         
